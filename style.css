@@ -1,0 +1,244 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	min-height: 100vh;
+  background-image: url(./images/Pozadina\ sajta.jpg);
+  background-size: cover;
+  background-position: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header img {
+  width: 70px;
+  display: block;
+  transition-duration: 1s;
+
+}
+.glavnitekst {
+  height: 80vh;
+  width: 100%;
+}
+.opis {
+  position: absolute;
+}
+
+.header img:hover {
+  transition-duration: 1s;
+  scale: 1.2;
+
+}
+
+.header {
+	padding-top: 20px;
+	padding-bottom: 15px;
+  flex-direction: column;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+h2,
+h3,
+a {
+	color: #0a1627;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+  margin-top: 8px;
+	font-size: 1.45em;
+  position: relative;
+}
+
+
+
+.main-nav {
+	margin-top: 5px;
+  display: flex;
+  
+
+}
+
+.main-nav a {
+	padding: 0 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+ 
+}
+
+.main-nav a {
+	color: #0a1627;
+	font-size: 17px;
+  transition-duration: 0.5s;
+  
+  
+}
+
+.main-nav a::before {
+    content: '';
+    position: relative;
+    display: block;
+    background-color: #0a1627;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    bottom: -30px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+.hamburger {
+  position: absolute;
+  display: block;
+  width: 35px;
+  margin-left: 85%;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 99;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-7px, 6px);
+  background-color: floralwhite;
+
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-8px, -7px);
+  background-color: floralwhite;
+
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+
+.mobile-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 65vh;
+  display: none;
+  z-index: 98;
+  background-color: rgba(10, 22, 39, 0.7);
+  padding-top: 140px;
+  padding-bottom: 50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  
+}
+
+.mobile-nav.is-active {
+  display: block;
+ 
+ 
+}
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  color: #fff;
+  background-color: #0a1627;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+  background-color: floralwhite;
+  color: #0a1627;
+  transition: 0.3s;
+}
+
+@media (min-width: 500px ) {
+  
+  .hamburger {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  
+  }
+  .mobile-nav.is-active {
+    display: none;
+  
+  }
+  .mobile-nav a {
+    display: none;
+  }
+  
+}
+
+
+@media (max-width: 500px ) {
+
+  .main-nav {
+    display: none;
+
+  }
+  
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #0a1627;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+
